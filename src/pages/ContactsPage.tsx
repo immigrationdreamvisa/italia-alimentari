@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
-import stabilimentiMondoImg from '../assets/images/italia_alimentari_stabilimenti_mondo.png';
+const stabilimentiMondoImg = '/images/italia_alimentari_stabilimenti_mondo.png';
 
 interface ContactsPageProps {
   currentLanguage?: string;
@@ -203,94 +203,94 @@ export const ContactsPage: React.FC<ContactsPageProps> = ({ currentLanguage = 'I
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
-            {/* Left Column: Authentic Typography & Official Address Hierarchy */}
-            <div className="lg:col-span-6 space-y-4 text-[14px] sm:text-[15px] leading-relaxed text-[#333333] pt-2">
+            {/* Left Column: Authentic Typography & Official Address Hierarchy matching reference */}
+            <div className="lg:col-span-6 space-y-6 pt-2 font-sans">
 
-              <h1 className="text-xl sm:text-2xl font-bold text-[#1f2421] mb-5 font-sans tracking-tight">
+              <h1 className="text-2xl sm:text-[32px] font-bold text-[#1A1A1A] mb-8 font-sans tracking-tight">
                 Italia Alimentari S.p.A.
               </h1>
 
-              {/* sede di Busseto */}
+              {/* 1. sede di Busseto */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">sede di Busseto, Parma</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">sede di Busseto, Parma</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.bussetoDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Via Europa, 14 – Tel{' '}
                   <a
                     href="tel:+390524930311"
-                    className="hover:text-[#EAB600] transition-colors font-medium text-[#222222]"
+                    className="text-[#666666] hover:text-[#1A1A1A] transition-colors"
                   >
                     +39 0524 930311
-                  </a>
-                  {' '}– PEC:{' '}
+                  </a>{' '}
+                  – PEC:{' '}
                   <a
                     href="mailto:info@pec.italiaalimentari.it"
-                    className="hover:text-[#EAB600] transition-colors underline decoration-[#666666]/40"
+                    className="text-[#666666] underline hover:text-[#1A1A1A] transition-colors"
                   >
                     info@pec.italiaalimentari.it
                   </a>
                 </p>
               </div>
 
-              {/* sede di Gazoldo degli Ippoliti */}
+              {/* 2. sede di Gazoldo degli Ippoliti */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">sede di Gazoldo degli Ippoliti, Mantova</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">sede di Gazoldo degli Ippoliti, Mantova</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.gazoldoDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Via Marconi, 3 – Tel{' '}
                   <a
                     href="tel:+3903766801"
-                    className="hover:text-[#EAB600] transition-colors font-medium text-[#222222]"
+                    className="text-[#666666] hover:text-[#1A1A1A] transition-colors"
                   >
                     +39 0376 6801
-                  </a>
-                  {' '}– Email:{' '}
+                  </a>{' '}
+                  – Email:{' '}
                   <a
                     href="mailto:info@italiaalimentari.it"
-                    className="hover:text-[#EAB600] transition-colors underline decoration-[#666666]/40"
+                    className="text-[#666666] underline hover:text-[#1A1A1A] transition-colors"
                   >
                     info@italiaalimentari.it
                   </a>
                 </p>
               </div>
 
-              {/* sede di Postalesio */}
+              {/* 3. sede di Postalesio */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">sede di Postalesio, Sondrio</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">sede di Postalesio, Sondrio</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.postalesioDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Via Crocetta, 2
                 </p>
               </div>
 
-              {/* sede di Mandatoriccio */}
+              {/* 4. sede di Mandatoriccio */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">sede di Mandatoriccio, Cosenza</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">sede di Mandatoriccio, Cosenza</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.mandatoriccioDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Contrada Filiciusa
                 </p>
               </div>
 
-              {/* Castelfrigo LV */}
+              {/* 5. Castelfrigo LV */}
               <div>
-                <p>
+                <p className="text-[15px] sm:text-base leading-snug">
                   <a
                     href="https://www.castelfrigo.it"
                     target="_blank"
@@ -299,70 +299,70 @@ export const ContactsPage: React.FC<ContactsPageProps> = ({ currentLanguage = 'I
                   >
                     Castelfrigo LV
                   </a>{' '}
-                  <span className="font-normal text-[#555555]">
+                  <span className="font-normal text-[#666666]">
                     {t.castelfrigoDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Castelnuovo Rangone – Modena
                 </p>
               </div>
 
-              {/* Italia Alimentari UK */}
+              {/* 6. Italia Alimentari UK */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">Italia Alimentari UK</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">Italia Alimentari UK</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.commercialBranch}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   60 Grays Inn Road, London
                 </p>
               </div>
 
-              {/* Italia Alimentari DE */}
+              {/* 7. Italia Alimentari DE */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">Italia Alimentari DE</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">Italia Alimentari DE</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.commercialBranch}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Planegger Str. 3, 82110 Germering
                 </p>
               </div>
 
-              {/* Italia Alimentari Canada LTD */}
+              {/* 8. Italia Alimentari Canada LTD */}
               <div>
-                <p className="text-[#222222]">
-                  <strong className="font-bold">Italia Alimentari Canada LTD</strong>{' '}
-                  <span className="font-normal text-[#555555]">
+                <p className="text-[15px] sm:text-base leading-snug">
+                  <strong className="font-bold text-[#1A1A1A]">Italia Alimentari Canada LTD</strong>{' '}
+                  <span className="font-normal text-[#666666]">
                     {t.canadaDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   Brampton, Ontario – Canada – 116, Nuggett Court
                 </p>
               </div>
 
-              {/* Corte Buona Llc */}
+              {/* 9. Corte Buona Llc */}
               <div>
-                <p>
+                <p className="text-[15px] sm:text-base leading-snug">
                   <a
                     href="https://cortebuona-usa.it/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-[#222222] hover:underline"
+                    className="font-bold text-[#1A1A1A] hover:underline"
                   >
                     Corte Buona Llc
                   </a>{' '}
-                  <span className="font-normal text-[#555555]">
+                  <span className="font-normal text-[#666666]">
                     {t.usaDesc}
                   </span>
                 </p>
-                <p className="text-sm text-[#666666] mt-0.5">
+                <p className="text-sm sm:text-[14px] text-[#666666] mt-1 leading-normal">
                   New Jersey – Stati Uniti – 1 Amboy Ave, Woodbridge Township
                 </p>
               </div>
@@ -370,7 +370,7 @@ export const ContactsPage: React.FC<ContactsPageProps> = ({ currentLanguage = 'I
             </div>
 
             {/* Right Column: Genuine 1920x1195 Map Graphic without borders or badges */}
-            <div className="lg:col-span-6 flex items-center justify-center">
+            <div className="lg:col-span-6 flex items-start justify-center pt-8 lg:pt-14">
               <img
                 src={stabilimentiMondoImg}
                 alt="Italia Alimentari stabilimenti produttivi e filiali nel mondo"

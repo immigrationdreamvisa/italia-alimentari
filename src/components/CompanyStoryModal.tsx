@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Award, ShieldCheck, Factory, HeartHandshake, ArrowRight } from 'lucide-react';
 import { ItaliaAlimentariLogo } from './ItaliaAlimentariLogo';
+import { handleImageError } from '../utils/imageUtils';
 
 interface CompanyStoryModalProps {
   isOpen: boolean;
@@ -57,10 +58,10 @@ export const CompanyStoryModal: React.FC<CompanyStoryModalProps> = ({
         {/* Header */}
         <div className="relative h-64 w-full overflow-hidden bg-[#151515]">
           <img
-            src="/src/assets/images/busseto_heritage_estate.jpg"
+            src="/images/busseto_heritage_estate.jpg"
             alt="Historic Italia Alimentari founding estate in Busseto"
             className="w-full h-full object-cover opacity-60"
-            referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-black/40" />
           

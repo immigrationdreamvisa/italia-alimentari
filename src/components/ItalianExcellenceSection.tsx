@@ -9,6 +9,7 @@ import {
   Feather
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface ItalianExcellenceSectionProps {
   onDiscoverHeritage?: () => void;
@@ -76,10 +77,10 @@ export const ItalianExcellenceSection: React.FC<ItalianExcellenceSectionProps> =
             <div className="lg:col-span-7 relative">
               <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#FAF4E7] group">
                 <img
-                  src="/src/assets/images/charcuterie_board_masterpiece.jpg"
+                  src="/images/charcuterie_board_masterpiece.jpg"
                   alt="Authentic Italian charcuterie craftsmanship with whole Prosciutto, Mortadella, and Salame"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
 
                 {/* Subtle vignette gradient */}
@@ -209,10 +210,10 @@ export const ItalianExcellenceSection: React.FC<ItalianExcellenceSectionProps> =
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#FAF4E7] group">
                 <img
-                  src="/src/assets/images/artisan_handsalting_prosciutto.jpg"
+                  src="/images/artisan_handsalting_prosciutto.jpg"
                   alt="Master salumiere hand-salting fresh prosciutto in aging cellars"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
@@ -229,10 +230,10 @@ export const ItalianExcellenceSection: React.FC<ItalianExcellenceSectionProps> =
               {/* Overlapping Secondary Image: Cleanroom Lab */}
               <div className="hidden sm:block absolute -bottom-8 -left-8 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-[#FFFDF8]">
                 <img
-                  src="/src/assets/images/sustainable_fsc_paper_packaging.jpg"
+                  src="/images/sustainable_fsc_paper_packaging.jpg"
                   alt="Sustainable FSC certified paper packaging for charcuterie"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute bottom-2.5 left-2.5 right-2.5 text-[9px] font-mono text-white/90 text-left font-bold uppercase tracking-wider">

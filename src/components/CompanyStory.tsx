@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Factory, HeartHandshake } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface CompanyStoryProps {
   onOpenStoryModal: () => void;
@@ -102,10 +103,10 @@ export const CompanyStory: React.FC<CompanyStoryProps> = ({ onOpenStoryModal }) 
               <div className="col-span-8 relative">
                 <div className="aspect-[3/4] rounded-t-[120px] rounded-b-2xl overflow-hidden shadow-xl border-4 border-[#FFFFFF] bg-[#FFFDF8]">
                   <img
-                    src="/src/assets/images/italian_countryside_1793428037750.jpg"
+                    src="/images/italian_countryside_1793428037750.jpg"
                     alt="Sunlit hills and vineyards of Emilia-Romagna and Lombardy"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/60 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-5 left-5 text-white">
@@ -121,10 +122,10 @@ export const CompanyStory: React.FC<CompanyStoryProps> = ({ onOpenStoryModal }) 
                 {/* Secondary Image Card */}
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg border-3 border-[#FFFFFF] bg-[#FAF4E7]">
                   <img
-                    src="/src/assets/images/modern_production_plant_1793428040629.jpg"
+                    src="/images/modern_production_plant_1793428040629.jpg"
                     alt="Cleanroom slicing line at Italia Alimentari"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                 </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Check, Award, Package, ArrowRight, ShieldCheck } from 'lucide-react';
 import { ProductItem } from '../data/companyData';
+import { handleImageError } from '../utils/imageUtils';
 
 interface ProductModalProps {
   product: ProductItem | null;
@@ -27,7 +28,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             src={product.image}
             alt={product.title}
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/80 via-[#151515]/30 to-transparent" />
           

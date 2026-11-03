@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Calendar, Clock, Share2, ArrowRight } from 'lucide-react';
 import { NewsItem } from '../data/companyData';
+import { handleImageError } from '../utils/imageUtils';
 
 interface NewsModalProps {
   news: NewsItem | null;
@@ -23,7 +24,7 @@ export const NewsModal: React.FC<NewsModalProps> = ({ news, onClose, onContactPr
             src={news.image}
             alt={news.title}
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/80 via-transparent to-transparent" />
           

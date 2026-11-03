@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { handleImageError } from '../utils/imageUtils';
 import { 
   Play, 
   Pause, 
@@ -62,7 +63,7 @@ const EPISODES: ChefMasterclassEpisode[] = [
     chefTitle: 'Executive Culinary Director — Accademia Gastronomica Parma',
     duration: 200,
     videoSrc: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    posterImage: '/src/assets/images/glazed_crisp_bacon_1793428040147.jpg',
+    posterImage: '/images/glazed_crisp_bacon_1793428040147.jpg',
     starProduct: 'Italia Alimentari Pancetta Cubetti (Busseto)',
     difficulty: 'Medium',
     prepTime: '25 mins',
@@ -107,7 +108,7 @@ const EPISODES: ChefMasterclassEpisode[] = [
     chefTitle: 'Master Salumi Sommelier & Food Stylist — Busseto Cellars',
     duration: 180,
     videoSrc: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
-    posterImage: '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg',
+    posterImage: '/images/chef_plating_charcuterie_1793429017594.jpg',
     starProduct: 'Prosciutto di Parma DOP 24-Month Reserve',
     difficulty: 'Artisanal',
     prepTime: '15 mins',
@@ -152,7 +153,7 @@ const EPISODES: ChefMasterclassEpisode[] = [
     chefTitle: 'Head of Culinary Innovation — Italia Alimentari R&D',
     duration: 210,
     videoSrc: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    posterImage: '/src/assets/images/gourmet_recipe_spread_1793429018072.jpg',
+    posterImage: '/images/gourmet_recipe_spread_1793429018072.jpg',
     starProduct: 'Mortadella Bologna IGP Gran Ibis & Pistacchio',
     difficulty: 'Easy Gourmet',
     prepTime: '20 mins',
@@ -632,7 +633,7 @@ export const ChefVideoSection: React.FC<ChefVideoSectionProps> = ({
                 className={`w-full h-full object-cover transition-transform duration-[12000ms] ease-out ${
                   isPlaying ? 'scale-115 translate-y-[-2%]' : 'scale-100'
                 }`}
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/60" />
             </div>
@@ -848,10 +849,10 @@ export const ChefVideoSection: React.FC<ChefVideoSectionProps> = ({
               <div className="flex items-center gap-4 mb-5">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#FFC900] shadow-md shrink-0">
                   <img
-                    src="/src/assets/images/chef_plating_charcuterie_1793429017594.jpg"
+                    src="/images/chef_plating_charcuterie_1793429017594.jpg"
                     alt={activeEpisode.chefName}
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 rounded-full border-2 border-[#1A1A1A]" />
                 </div>

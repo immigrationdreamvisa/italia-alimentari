@@ -17,6 +17,8 @@ import { Footer } from './components/Footer';
 
 // Dedicated Pages
 import { CompanyPage } from './pages/CompanyPage';
+import { ProductsPage } from './pages/ProductsPage';
+import { BrandsPage } from './pages/BrandsPage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { QualityPage } from './pages/QualityPage';
 import { StructurePage } from './pages/StructurePage';
@@ -25,13 +27,14 @@ import { ContactsPage } from './pages/ContactsPage';
 
 // Modals
 import { SearchModal } from './components/SearchModal';
+import { ProductModal } from './components/ProductModal';
 import { SolutionModal } from './components/SolutionModal';
 import { RecipeModal } from './components/RecipeModal';
 import { CompanyStoryModal } from './components/CompanyStoryModal';
 import { ContactModal } from './components/ContactModal';
 import { LegalModal } from './components/LegalModal';
 
-import { SolutionItem, RecipeItem } from './data/companyData';
+import { ProductItem, SolutionItem, RecipeItem } from './data/companyData';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 function MainApp() {
@@ -46,6 +49,7 @@ function MainApp() {
   const [contactTab, setContactTab] = useState('general');
   const [contactProductInterest, setContactProductInterest] = useState('');
 
+  const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [selectedSolution, setSelectedSolution] = useState<SolutionItem | null>(null);
   const [selectedRecipe, setSelectedRecipe] = useState<RecipeItem | null>(null);
 
@@ -56,7 +60,7 @@ function MainApp() {
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '') as PageId;
       const validPages: PageId[] = [
-        'home', 'company', 'solutions', 'quality',
+        'home', 'company', 'products', 'brands', 'solutions', 'quality',
         'structure', 'recipes', 'contacts'
       ];
       if (validPages.includes(hash)) {
@@ -115,7 +119,7 @@ function MainApp() {
               }}
             />
 
-            {/* 2. New Editorial Brand Showcase: A Taste of Italian Excellence */}
+            {/* 2. Editorial Brand Showcase: A Taste of Italian Excellence */}
             <ItalianExcellenceSection
               onDiscoverHeritage={() => setStoryOpen(true)}
               onExploreWorld={() => handleNavigate('quality')}
@@ -142,13 +146,13 @@ function MainApp() {
               onDiscoverInnovation={() => handleNavigate('structure')}
             />
 
-            {/* 8. Recipes & Culinary Inspiration */}
+            {/* 7. Recipes & Culinary Inspiration */}
             <RecipesSection
               onSelectRecipe={(r) => setSelectedRecipe(r)}
               onViewAllRecipes={() => handleNavigate('recipes')}
             />
 
-            {/* 9. Final CTA */}
+            {/* 8. Final CTA */}
             <FinalCta
               onContact={() => handleNavigate('contacts')}
               onWorkWithUs={() => handleNavigate('contacts')}
@@ -161,6 +165,20 @@ function MainApp() {
           <CompanyPage
             onOpenStoryModal={() => setStoryOpen(true)}
             onContact={() => handleNavigate('contacts')}
+          />
+        )}
+
+        {currentPage === 'products' && (
+          <ProductsPage
+            onSelectProduct={(p) => setSelectedProduct(p)}
+            onRequestCatalogue={() => handleOpenContact('business', 'Product Trade Catalogue')}
+          />
+        )}
+
+        {currentPage === 'brands' && (
+          <BrandsPage
+            onSelectBrand={(b) => handleOpenContact('business', `Brand Portfolio: ${b.name}`)}
+            onRequestBrandInfo={(bName) => handleOpenContact('business', `Brand Information: ${bName}`)}
           />
         )}
 
@@ -212,6 +230,12 @@ function MainApp() {
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
         onSelectSolution={(s) => setSelectedSolution(s)}
+      />
+
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+        onRequestSample={(productName) => handleOpenContact('business', `Product Sample: ${productName}`)}
       />
 
       <SolutionModal

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BRANDS_DATA, BrandItem } from '../data/companyData';
 import { Crown, Award, ShieldCheck, HeartHandshake, ArrowRight, Check } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface BrandsPageProps {
   onSelectBrand: (brand: BrandItem) => void;
@@ -145,16 +146,16 @@ export const BrandsPage: React.FC<BrandsPageProps> = ({
               <img
                 src={
                   selectedBrand.id === 'ibis-1962'
-                    ? '/src/assets/images/traditional_deli_meats_1793428037900.jpg'
+                    ? '/images/traditional_deli_meats_1793428037900.jpg'
                     : selectedBrand.id === 'corte-buona'
-                    ? '/src/assets/images/sliced_deli_meats_1793428038740.jpg'
+                    ? '/images/sliced_deli_meats_1793428038740.jpg'
                     : selectedBrand.id === 'montana'
-                    ? '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg'
-                    : '/src/assets/images/hero_charcuterie_1793428038233.jpg'
+                    ? '/images/chef_plating_charcuterie_1793429017594.jpg'
+                    : '/images/hero_charcuterie_1793428038233.jpg'
                 }
                 alt={selectedBrand.name}
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
             </div>
 

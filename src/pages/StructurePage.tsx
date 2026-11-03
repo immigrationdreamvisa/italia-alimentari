@@ -46,6 +46,7 @@ export const StructurePage: React.FC<StructurePageProps> = ({ onContact }) => {
               <p>• BRC Grade AA & USDA Approved</p>
             </div>
             <div className="pt-2 border-t border-[#151515]/8 text-[11px] text-[#68645B] space-y-0.5">
+              <p className="text-[#151515]">Via Europa 14, 43011 Busseto (PR), Italy</p>
               <p>Tel: <a href="tel:+390524930311" className="font-semibold text-[#151515] hover:text-[#EAB600] transition-colors">+39 0524 930311</a></p>
               <p>PEC: <a href="mailto:info@pec.italiaalimentari.it" className="hover:text-[#EAB600] transition-colors underline decoration-[#68645B]/30">info@pec.italiaalimentari.it</a></p>
             </div>
@@ -65,6 +66,7 @@ export const StructurePage: React.FC<StructurePageProps> = ({ onContact }) => {
               <p>• Photovoltaic powered cold storage</p>
             </div>
             <div className="pt-2 border-t border-[#151515]/8 text-[11px] text-[#68645B] space-y-0.5">
+              <p className="text-[#151515]">Via Marconi 3, 46040 Gazoldo degli Ippoliti (MN), Italy</p>
               <p>Tel: <a href="tel:+3903766801" className="font-semibold text-[#151515] hover:text-[#EAB600] transition-colors">+39 0376 6801</a></p>
               <p>Email: <a href="mailto:info@italiaalimentari.it" className="hover:text-[#EAB600] transition-colors underline decoration-[#68645B]/30">info@italiaalimentari.it</a></p>
             </div>

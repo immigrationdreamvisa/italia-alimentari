@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2, Shield, Leaf, Clock, Cpu } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface EditorialStoryProps {
   onOpenCharter: () => void;
@@ -94,10 +95,10 @@ export const EditorialStory: React.FC<EditorialStoryProps> = ({ onOpenCharter })
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#252525]">
               <img
-                src="/src/assets/images/modern_production_plant_1793428040629.jpg"
+                src="/images/modern_production_plant_1793428040629.jpg"
                 alt="Automated high-speed slicing and quality inspection line"
                 className="w-full aspect-[4/3] object-cover"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/90 via-[#151515]/30 to-transparent" />
               

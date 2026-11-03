@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, Sparkles, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface HeroProps {
   onDiscoverStory?: () => void;
@@ -106,10 +107,10 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverStory, onWatchStory, onExp
             {/* Main Arch-shaped Image Frame - Authentic Italian Deli Food Only */}
             <div className="relative w-full max-w-[450px] aspect-[4/5] rounded-t-[140px] rounded-b-2xl overflow-hidden shadow-2xl border-4 border-[#FFFFFF] bg-[#FAF4E7]">
               <img
-                src="/src/assets/images/hero_charcuterie_1793428038233.jpg"
+                src="/images/hero_charcuterie_1793428038233.jpg"
                 alt="Gourmet Italian charcuterie board with prosciutto, salami and olives"
                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
 
               {/* Scrim gradient */}
@@ -129,10 +130,10 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverStory, onWatchStory, onExp
             {/* Overlapping Circular Mask with Traditional Cured Salumi */}
             <div className="absolute -bottom-5 -left-6 sm:-left-3 w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-xl border-4 border-[#FFFFFF] bg-[#FAF4E7]">
               <img
-                src="/src/assets/images/pinsa_mortadella_pistachio.jpg"
+                src="/images/pinsa_mortadella_pistachio.jpg"
                 alt="Artisanal Mortadella and pistachio specialty"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
             </div>
 

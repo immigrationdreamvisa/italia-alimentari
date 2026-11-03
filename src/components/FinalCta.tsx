@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Briefcase } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface FinalCtaProps {
   onContact: () => void;
@@ -21,10 +22,10 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onContact, onWorkWithUs }) =
             <div className="lg:col-span-5 relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-2 border-[#FFFFFF] bg-[#FAF4E7]">
                 <img
-                  src="/src/assets/images/italian_countryside_1793428037750.jpg"
+                  src="/images/italian_countryside_1793428037750.jpg"
                   alt="Italia Alimentari Gazoldo degli Ippoliti and Emilian terroir"
                   className="w-full h-full object-cover transform hover:scale-108 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
               </div>
 

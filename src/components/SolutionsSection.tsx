@@ -2,6 +2,7 @@ import React from 'react';
 import { SOLUTIONS_DATA, SolutionItem } from '../data/companyData';
 import { Store, UtensilsCrossed, Factory, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface SolutionsSectionProps {
   onSelectSolution: (solution: SolutionItem) => void;
@@ -18,15 +19,15 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onSelectSolu
   // Dedicated visual backgrounds for each solution category (100% unique images)
   const solutionVisuals = [
     {
-      img: '/src/assets/images/sliced_deli_meats_1793428038740.jpg',
+      img: '/images/sliced_deli_meats_1793428038740.jpg',
       alt: 'Large Retail GDO pre-sliced deli shelves'
     },
     {
-      img: '/src/assets/images/foodservice_culinary_prep.jpg',
+      img: '/images/foodservice_culinary_prep.jpg',
       alt: 'Food service and culinary chef kitchen preparation'
     },
     {
-      img: '/src/assets/images/glazed_crisp_bacon_1793428040147.jpg',
+      img: '/images/glazed_crisp_bacon_1793428040147.jpg',
       alt: 'Industrial culinary bacon cuts and customized meat manufacturing'
     }
   ];
@@ -73,7 +74,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onSelectSolu
                     src={visual.img}
                     alt={visual.alt}
                     className="w-full h-full object-cover transform group-hover:scale-106 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/75 via-[#151515]/20 to-transparent" />

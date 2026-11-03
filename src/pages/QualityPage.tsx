@@ -1,6 +1,7 @@
 import React from 'react';
 import { QUALITY_STANDARDS } from '../data/companyData';
 import { ShieldCheck, Award, CheckCircle2, FileText, ArrowRight } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface QualityPageProps {
   onContactQuality: () => void;
@@ -27,25 +28,25 @@ export const QualityPage: React.FC<QualityPageProps> = ({ onContactQuality }) =>
       stage: '01',
       title: 'Raw Material Genetic & Feed Traceability',
       desc: '100% certified Italian livestock from accredited farms. DNA verification, non-GMO feed compliance, and ClassyFarm animal welfare scoring.',
-      image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg'
+      image: '/images/traditional_deli_meats_1793428037900.jpg'
     },
     {
       stage: '02',
       title: 'ISO Class 7 Cleanroom Laminar Air Slicing',
       desc: 'Slicing lines operate in medical-grade cleanrooms with HEPA-filtered positive pressure air at +2°C to prevent fat oxidation and microbiological contamination.',
-      image: '/src/assets/images/modern_production_plant_1793428040629.jpg'
+      image: '/images/modern_production_plant_1793428040629.jpg'
     },
     {
       stage: '03',
       title: 'Gas Chromatography & Residual Oxygen (<0.5%)',
       desc: 'In-line laser sensors inspect 100% of sealed MAP packages to ensure residual oxygen remains strictly below 0.5%, preserving vibrant color naturally.',
-      image: '/src/assets/images/food_quality_inspection_1793429017795.jpg'
+      image: '/images/food_quality_inspection_1793429017795.jpg'
     },
     {
       stage: '04',
       title: 'Dual-Energy X-Ray & Metal Detection',
       desc: 'State-of-the-art dual-energy X-ray vision systems inspect every pack for bone fragments, stainless steel, and seal micro-leaks prior to cartoning.',
-      image: '/src/assets/images/foodservice_culinary_prep.jpg'
+      image: '/images/foodservice_culinary_prep.jpg'
     }
   ];
 
@@ -76,10 +77,10 @@ export const QualityPage: React.FC<QualityPageProps> = ({ onContactQuality }) =>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
           <div className="lg:col-span-7 aspect-[16/10] rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-[#FAF4E7]">
             <img
-              src="/src/assets/images/laboratory_spectrometry_quality.jpg"
+              src="/images/laboratory_spectrometry_quality.jpg"
               alt="Food quality assurance specialist inspecting charcuterie packages in cleanroom laboratory"
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
+              onError={handleImageError}
             />
           </div>
 
@@ -130,7 +131,7 @@ export const QualityPage: React.FC<QualityPageProps> = ({ onContactQuality }) =>
                       src={stg.image}
                       alt={stg.title}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
+                      onError={handleImageError}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                     <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#151515]/90 text-[#FFC900] border border-[#FFC900]/30 backdrop-blur-xs">

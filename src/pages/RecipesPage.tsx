@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RECIPES_DATA, RecipeItem } from '../data/companyData';
 import { Clock, ChefHat, ArrowUpRight, Check, Utensils, Wine, Thermometer, Award, Send, Eye } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface RecipesPageProps {
   onSelectRecipe: (r: RecipeItem) => void;
@@ -111,7 +112,7 @@ export const RecipesPage: React.FC<RecipesPageProps> = ({
                   src={activeRecipe.image}
                   alt={activeRecipe.title}
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
 
@@ -331,7 +332,7 @@ export const RecipesPage: React.FC<RecipesPageProps> = ({
                     src={recipe.image}
                     alt={recipe.title}
                     className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/60 via-transparent to-transparent pointer-events-none" />
 

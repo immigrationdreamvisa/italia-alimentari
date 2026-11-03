@@ -1,6 +1,7 @@
 import React from 'react';
 import { SOLUTIONS_DATA, SolutionItem } from '../data/companyData';
 import { Store, UtensilsCrossed, Factory, CheckCircle2, ArrowRight } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface SolutionsPageProps {
   onSelectSolution: (s: SolutionItem) => void;
@@ -59,7 +60,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({
                     src={sol.image}
                     alt={sol.title}
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                 </div>
 

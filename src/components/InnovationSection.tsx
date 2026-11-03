@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Cpu, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface InnovationSectionProps {
   onDiscoverInnovation: () => void;
@@ -18,10 +19,10 @@ export const InnovationSection: React.FC<InnovationSectionProps> = ({ onDiscover
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#FAF4E7]">
               <img
-                src="/src/assets/images/sustainable_solar_facility.jpg"
+                src="/images/sustainable_solar_facility.jpg"
                 alt="State-of-the-art Gazoldo industrial facility and automated slicing lines at Italia Alimentari"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/80 via-transparent to-transparent pointer-events-none" />
 

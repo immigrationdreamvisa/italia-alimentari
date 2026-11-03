@@ -2,6 +2,7 @@ import React from 'react';
 import { QUALITY_STANDARDS } from '../data/companyData';
 import { Award, ShieldCheck, CheckCircle2, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface QualitySectionProps {
   onExploreQuality: () => void;
@@ -72,10 +73,10 @@ export const QualitySection: React.FC<QualitySectionProps> = ({
           <div className="lg:col-span-5 relative">
             <div className="aspect-[3/4] rounded-t-[120px] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#FFFDF8]">
               <img
-                src="/src/assets/images/hero_prosciutto_rosette.jpg"
+                src="/images/hero_prosciutto_rosette.jpg"
                 alt="Finely sliced Prosciutto di Parma rosettes displaying artisanal curing and texture"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/75 via-transparent to-transparent pointer-events-none" />
 
@@ -158,10 +159,10 @@ export const QualitySection: React.FC<QualitySectionProps> = ({
             <div className="bg-white border border-[#151515]/10 rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 text-left group">
               <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF4E7]">
                 <img
-                  src="/src/assets/images/laboratory_spectrometry_quality.jpg"
+                  src="/images/laboratory_spectrometry_quality.jpg"
                   alt="Quality assurance specialist performing spectrometry and microbiological inspection"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/70 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#151515]/80 text-[#FFC900] border border-[#FFC900]/30 backdrop-blur-xs">
@@ -189,10 +190,10 @@ export const QualitySection: React.FC<QualitySectionProps> = ({
             <div className="bg-white border border-[#151515]/10 rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 text-left group">
               <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF4E7]">
                 <img
-                  src="/src/assets/images/alpine_valtellina_facility.jpg"
+                  src="/images/alpine_valtellina_facility.jpg"
                   alt="Alpine Valtellina facility utilizing natural high-altitude microclimate"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/70 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#151515]/80 text-[#FFC900] border border-[#FFC900]/30 backdrop-blur-xs">
@@ -220,10 +221,10 @@ export const QualitySection: React.FC<QualitySectionProps> = ({
             <div className="bg-white border border-[#151515]/10 rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 text-left group">
               <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF4E7]">
                 <img
-                  src="/src/assets/images/busseto_heritage_estate.jpg"
+                  src="/images/busseto_heritage_estate.jpg"
                   alt="Historic Busseto estate and microclimate aging cellars in the Parma Food Valley"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/70 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#151515]/80 text-[#FFC900] border border-[#FFC900]/30 backdrop-blur-xs">

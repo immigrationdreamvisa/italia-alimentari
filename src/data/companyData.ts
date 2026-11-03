@@ -100,7 +100,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: 'Premium Ingredients',
     shortDesc: '100% certified Italian pork cuts and natural seasonings.',
     fullDesc: 'Strict selection of fresh pork thighs, bellies and lean beef from audited Italian livestock farms with certified animal welfare and non-GMO feed guarantees.',
-    image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg',
+    image: '/images/traditional_deli_meats_1793428037900.jpg',
     detailHighlight: 'Sea salt from Cervia, cracked black pepper, garlic & Bronte pistachios'
   },
   {
@@ -108,7 +108,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: 'Traditional Recipes',
     shortDesc: 'Centuries-old regional salumi curing formulas.',
     fullDesc: 'Ancestral curing methods refined across decades in Busseto and Lombardy. Hand-salting, patient cellar resting, and gentle wood smoking without haste.',
-    image: '/src/assets/images/artisan_curing_cellar_1793429018781.jpg',
+    image: '/images/artisan_curing_cellar_1793429018781.jpg',
     detailHighlight: 'Long aging up to 24 months in natural microclimates'
   },
   {
@@ -116,7 +116,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: 'Advanced Technology',
     shortDesc: 'ISO certified cleanroom slicing & MAP systems.',
     fullDesc: 'Positive-pressure cleanroom chambers with laminar air flow where deli meats are sliced at controlled low temperatures, preserving fragrance and texture.',
-    image: '/src/assets/images/modern_production_plant_1793428040629.jpg',
+    image: '/images/modern_production_plant_1793428040629.jpg',
     detailHighlight: 'High-speed automated slicing with "fetta mossa" folded presentation'
   },
   {
@@ -124,7 +124,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: 'Quality Control',
     shortDesc: 'Continuous microbiological & laser optical testing.',
     fullDesc: 'Every tray undergoes in-line seal integrity validation, residual oxygen inspection, metal detection, and organoleptic sensory testing by certified master tasters.',
-    image: '/src/assets/images/food_quality_inspection_1793429017795.jpg',
+    image: '/images/food_quality_inspection_1793429017795.jpg',
     detailHighlight: 'Over 12,000 internal lab analyses conducted every year'
   },
   {
@@ -132,7 +132,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: 'Exceptional Products',
     shortDesc: 'Delicate aroma, silky texture, and authentic Italian taste.',
     fullDesc: 'Finished charcuterie trays, whole cured logs and snack kits ready for premier global supermarkets, gastronomy counters, and culinary professionals.',
-    image: '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg',
+    image: '/images/chef_plating_charcuterie_1793429017594.jpg',
     detailHighlight: 'Enjoyed in Michelin kitchens and family tables across 50+ countries'
   }
 ];
@@ -174,7 +174,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Prosciutto di Parma DOP',
     subtitle: 'Consorzio del Prosciutto di Parma · 18–24 Months',
     description: 'Slow cellar-aged dry-cured ham made strictly from selected Italian pork thighs and marine sea salt from Cervia, cured naturally in the fragrant Apennine air.',
-    image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg',
+    image: '/images/traditional_deli_meats_1793428037900.jpg',
     highlights: [
       'Aged minimum 18 to 24 months in historic Busseto cellars',
       'Ducal Crown fire-branded guarantee of authenticity',
@@ -192,7 +192,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Mortadella Bologna IGP Gran Ibis',
     subtitle: 'Artisan Heritage Since 1962 · Bronte Pistachios',
     description: 'The crowning achievement of Ibis: premium pork shoulder meat, prized throat lardons, delicate aromatic spices, and whole emerald green Bronte pistachios.',
-    image: '/src/assets/images/hero_charcuterie_1793428038233.jpg',
+    image: '/images/hero_charcuterie_1793428038233.jpg',
     highlights: [
       'Slow brick-oven gentle dry steaming for over 24 hours',
       'Firm, silky bite with evenly dispersed throat lardons',
@@ -210,7 +210,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Bresaola della Valtellina IGP',
     subtitle: 'Montagna Valtellina · Alpine Air Curing',
     description: 'Lean prime beef cuts ("Punta d\'Anca") dry-cured with mountain salt, juniper berries and alpine botanicals, matured under the cool breezes of Sondrio.',
-    image: '/src/assets/images/artisan_curing_cellar_1793429018781.jpg',
+    image: '/images/artisan_curing_cellar_1793429018781.jpg',
     highlights: [
       'Made exclusively from prime beef topside (Punta d\'Anca)',
       'Dry-salted by hand with juniper, bay leaves and cinnamon',
@@ -228,7 +228,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Salame Felino IGP & Regional Salamis',
     subtitle: 'Antica Salumeria Parmense · Natural Casing',
     description: 'Iconic Emilian salame made from coarse-ground pork shoulder and pancetta trimmings, seasoned with cracked peppercorns and white wine, and tied by hand.',
-    image: '/src/assets/images/gourmet_recipe_spread_1793429018072.jpg',
+    image: '/images/gourmet_recipe_spread_1793429018072.jpg',
     highlights: [
       'Traditional 60-degree diagonal slice presentation',
       'Enriched with Malvasia Colli di Parma dry white wine',
@@ -246,7 +246,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Culatello con Cotenna & Culatta',
     subtitle: 'King of Busseto Cured Charcuterie',
     description: 'The prized core muscle of the pork leg, cured with its natural rind to protect the meat\'s moisture through 14+ months of misty Po Valley aging.',
-    image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg',
+    image: '/images/traditional_deli_meats_1793428037900.jpg',
     highlights: [
       'The most aristocratic cured meat of the Parma plains',
       'Aged in natural humidity cellars without forced cooling',
@@ -264,7 +264,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Gran Antipasto Misto Trays',
     subtitle: 'Cleanroom Folded Charcuterie Selection · MAP',
     description: 'A luxurious three-compartment tasting tray presenting Prosciutto di Parma DOP, Salame Milano, and sweet Coppa, pre-folded with airy "fetta mossa" technology.',
-    image: '/src/assets/images/sliced_deli_meats_1793428038740.jpg',
+    image: '/images/sliced_deli_meats_1793428038740.jpg',
     highlights: [
       'Three iconic Italian cured specialties in one single tray',
       'Airy "fetta mossa" technology prevents slice clumping',
@@ -282,7 +282,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Pre-Sliced Prosciutto Crudo Dolce',
     subtitle: 'Eco-Friendly Paper Tray (-75% Plastic)',
     description: 'Gossamer-thin, velvety slices of sweet Italian dry-cured ham arranged in an innovative peelable paper tray that can be recycled in paper waste bins.',
-    image: '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg',
+    image: '/images/chef_plating_charcuterie_1793429017594.jpg',
     highlights: [
       'Reduced virgin plastic footprint by 75%',
       'Effortless peel-apart slices without tearing',
@@ -300,7 +300,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Roasted Herb Turkey Breast',
     subtitle: 'Petto di Tacchino Arrosto con Erbe Mediterranee',
     description: 'Whole selected turkey breast, gently steam-baked with rosemary, sage, and thyme, then browned on the surface for a golden roasted crust.',
-    image: '/src/assets/images/food_quality_inspection_1793429017795.jpg',
+    image: '/images/food_quality_inspection_1793429017795.jpg',
     highlights: [
       'Over 98% lean poultry meat with low fat (<1.5%)',
       'Delicately seasoned with Italian aromatic herbs',
@@ -318,7 +318,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Spanino Gourmet Pocket Panini & Focaccine',
     subtitle: 'Artisan Street Food · Filled & Ready to Heat',
     description: 'Soft stone-baked Italian pocket rolls filled generously with prime charcuterie, artisan cheeses, and savory culinary spreads.',
-    image: '/src/assets/images/italian_snacks_panini_1793428039900.jpg',
+    image: '/images/italian_snacks_panini_1793428039900.jpg',
     highlights: [
       'Stone-baked sourdough pocket bread with crunchy crust',
       'Premium fillings: Prosciutto & Mozzarella, Salame & Pecorino',
@@ -336,7 +336,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Aperitivo Snack Kits (Taralli, Salami & Parmigiano)',
     subtitle: 'Grab & Go Aperitivo All\'Italiana',
     description: 'Dual and triple compartment snack cups pairing bite-sized dry-cured salami sticks with extra-virgin olive oil Taralli Pugliesi and Parmigiano chunks.',
-    image: '/src/assets/images/hero_charcuterie_1793428038233.jpg',
+    image: '/images/hero_charcuterie_1793428038233.jpg',
     highlights: [
       'Complete authentic Italian aperitivo in a portable cup',
       'High natural protein: 12g+ protein per serving',
@@ -354,7 +354,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Italian Pancetta Arrotolata & Cured Cubetti',
     subtitle: 'Pancetta Dolce & Affumicata · Beechwood Smoke',
     description: 'Slow-cured Italian pork bellies, rolled tightly with crushed peppercorns and aromatic bay leaves, or diced into uniform cubetti for culinary perfection.',
-    image: '/src/assets/images/glazed_crisp_bacon_1793428040147.jpg',
+    image: '/images/glazed_crisp_bacon_1793428040147.jpg',
     highlights: [
       'Traditional rolled (Arrotolata) and flat cured (Tesa) styles',
       'Diced cubetti cut into precise 6x6mm culinary cubes',
@@ -372,7 +372,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     title: 'Beechwood Smoked Streaky Bacon & Guanciale',
     subtitle: 'Culinary Cuts for International Gastronomy & Breakfast',
     description: 'Uniform, lean-streaked rashers of smoked bacon and cured seasoned pork jowl (Guanciale), trimmed to exact restaurant specifications for maximum crispness.',
-    image: '/src/assets/images/modern_production_plant_1793428040629.jpg',
+    image: '/images/modern_production_plant_1793428040629.jpg',
     highlights: [
       'Cured with authentic Italian sea salt and whole herbs',
       'Even crisp-rendering without excess curling or water loss',
@@ -411,7 +411,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Top with sea salt flakes, close the focaccia, and serve immediately.'
     ],
     featuredProduct: 'Prosciutto di Parma DOP',
-    image: '/src/assets/images/italian_snacks_panini_1793428039900.jpg',
+    image: '/images/italian_snacks_panini_1793428039900.jpg',
     pairingNote: 'Lambrusco di Sorbara DOC or dry Franciacorta Brut',
     servingTemp: 'Room temperature (18°–20°C) to allow prosciutto fat to release aroma',
     chefTip: 'Fold prosciutto loosely like a delicate cloud; never press or compress the cold slices.',
@@ -442,7 +442,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Scatter rustic chunks of Parmigiano Reggiano and fill gaps with crisp grissini.'
     ],
     featuredProduct: 'Mortadella Bologna IGP & Salame Felino',
-    image: '/src/assets/images/gourmet_recipe_spread_1793429018072.jpg',
+    image: '/images/gourmet_recipe_spread_1793429018072.jpg',
     pairingNote: 'Prosecco Superiore di Valdobbiadene DOCG or Pignoletto Frizzante',
     servingTemp: 'Slightly chilled board (16°–18°C)',
     chefTip: 'Fan out mortadella into airy accordion folds rather than flat layers for a velvety mouthfeel.',
@@ -473,7 +473,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Serve in warmed bowls garnished with the crispy pancetta bits and extra Pecorino.'
     ],
     featuredProduct: 'Pancetta Affumicata & Cubetti',
-    image: '/src/assets/images/sizzling_guanciale_skillet.jpg',
+    image: '/images/sizzling_guanciale_skillet.jpg',
     pairingNote: 'Frascati Superiore DOCG or structured Cesanese del Piglio',
     servingTemp: 'Piping hot (freshly tossed off-heat at 75°C)',
     chefTip: 'Render the pancetta in a dry, cold pan over low flame so fat clarifies without burning.',
@@ -504,7 +504,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Serve chilled with warm artisan carasau flatbread.'
     ],
     featuredProduct: 'Bresaola della Valtellina IGP',
-    image: '/src/assets/images/bresaola_carpaccio_gourmet.jpg',
+    image: '/images/bresaola_carpaccio_gourmet.jpg',
     pairingNote: 'Valtellina Superiore DOCG or crisp Trentino Pinot Grigio',
     servingTemp: 'Chilled (12°–14°C)',
     chefTip: 'Drizzle truffle oil and lemon at the very last moment to avoid discoloring the tender beef fibers.',
@@ -535,7 +535,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Cut diagonally and serve piping hot with chips or fresh salad.'
     ],
     featuredProduct: 'Spanino & Roasted Turkey Breast',
-    image: '/src/assets/images/italian_snacks_panini_1793428039900.jpg'
+    image: '/images/italian_snacks_panini_1793428039900.jpg'
   },
   {
     id: 'pinsa-mortadella-pistachio',
@@ -560,7 +560,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Scatter crushed Bronte pistachios and fresh basil; finish with olive oil and serve.'
     ],
     featuredProduct: 'Mortadella Bologna IGP Gran Ibis',
-    image: '/src/assets/images/pinsa_mortadella_pistachio.jpg'
+    image: '/images/pinsa_mortadella_pistachio.jpg'
   },
   {
     id: 'piadina-romagnola-crudo',
@@ -584,7 +584,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Serve immediately while warm and crispy.'
     ],
     featuredProduct: 'Pre-Sliced Prosciutto Crudo Dolce',
-    image: '/src/assets/images/sliced_deli_meats_1793428038740.jpg'
+    image: '/images/sliced_deli_meats_1793428038740.jpg'
   },
   {
     id: 'spaghetti-guanciale-amatriciana',
@@ -609,7 +609,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Stir in abundant Pecorino Romano and serve immediately in warmed bowls.'
     ],
     featuredProduct: 'Pancetta Affumicata & Guanciale',
-    image: '/src/assets/images/glazed_crisp_bacon_1793428040147.jpg'
+    image: '/images/glazed_crisp_bacon_1793428040147.jpg'
   },
   {
     id: 'salame-felino-fig-crostini',
@@ -634,7 +634,7 @@ export const RECIPES_DATA: RecipeItem[] = [
       'Drizzle with aged Aceto Balsamico and garnish with fresh thyme leaves.'
     ],
     featuredProduct: 'Salame Felino IGP',
-    image: '/src/assets/images/gourmet_recipe_spread_1793429018072.jpg'
+    image: '/images/gourmet_recipe_spread_1793429018072.jpg'
   }
 ];
 
@@ -653,7 +653,7 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
     ],
     icon: 'Store',
     badge: 'Supermarkets & Hypermarkets',
-    image: '/src/assets/images/sliced_deli_meats_1793428038740.jpg'
+    image: '/images/sliced_deli_meats_1793428038740.jpg'
   },
   {
     id: 'food-service',
@@ -668,7 +668,7 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
     ],
     icon: 'UtensilsCrossed',
     badge: 'Hotels, Restaurants, Catering',
-    image: '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg'
+    image: '/images/chef_plating_charcuterie_1793429017594.jpg'
   },
   {
     id: 'industry',
@@ -683,7 +683,7 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
     ],
     icon: 'Factory',
     badge: 'Food Processing & Co-Manufacturing',
-    image: '/src/assets/images/modern_production_plant_1793428040629.jpg'
+    image: '/images/modern_production_plant_1793428040629.jpg'
   }
 ];
 
@@ -873,7 +873,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '3 min read',
     summary: 'A revolutionary paper-bottom MAP tray that reduces plastic usage by 75% while maintaining product shelf life and peak freshness.',
     content: 'Presented during the international Cibus exhibition in Parma, our engineering team revealed the latest generation of recyclable paper trays. Developed in partnership with certified sustainable forestry partners, the new tray features an easily separable film layer, allowing European consumers to recycle the paper component directly in household paper streams.',
-    image: '/src/assets/images/sliced_deli_meats_1793428038740.jpg'
+    image: '/images/sliced_deli_meats_1793428038740.jpg'
   },
   {
     id: 'gran-ibis-heritage',
@@ -883,7 +883,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '4 min read',
     summary: 'Reflecting on over six decades of slow brick-oven baking and hand-selected seasonings that make Gran Ibis a true gastronomic legend.',
     content: 'Since 1962 in Busseto, Ibis has upheld the sacred discipline of authentic Mortadella. Using exclusively selected lean pork shoulder, prized lardons from the throat, and slow steaming in traditional dry air stoves, Gran Ibis continues to lead sensory evaluations across Europe.',
-    image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg'
+    image: '/images/traditional_deli_meats_1793428037900.jpg'
   },
   {
     id: 'cold-chain-quality-expansion',
@@ -893,7 +893,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '4 min read',
     summary: 'Direct cold chain integration guarantees that pre-sliced Prosciutto and Bresaola reach international gourmet counters with zero flavor oxidation.',
     content: 'As demand for certified Italian cured delicacies accelerates globally, Italia Alimentari has deepened its partnership network across the Pacific and Atlantic basins, ensuring that Prosciutto di Parma DOP reaches international tables with unaltered aroma.',
-    image: '/src/assets/images/modern_production_plant_1793428040629.jpg'
+    image: '/images/modern_production_plant_1793428040629.jpg'
   },
   {
     id: 'anuga-cologne-showcase',
@@ -903,7 +903,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '3 min read',
     summary: 'Italia Alimentari welcomes commercial buyers and retail category managers to the Italian Pavilion at Anuga, exhibiting ultra-thin folded slice technology.',
     content: 'At the world\'s largest food and beverage trade fair in Cologne, Italia Alimentari presented its comprehensive B2B co-packing and private label portfolio. Buyers from over 35 countries toured interactive tasting sessions featuring our "fetta mossa" folded slice technology and eco-sustainable paper blister packs.',
-    image: '/src/assets/images/hero_charcuterie_1793428038233.jpg'
+    image: '/images/hero_charcuterie_1793428038233.jpg'
   },
   {
     id: 'bresaola-mountain-award',
@@ -913,7 +913,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '2 min read',
     summary: 'The Italian Charcuterie Guild honors Montagna Punta d\'Anca with top honors for tenderness, ruby clarity, and authentic mountain seasoning.',
     content: 'During the annual Italian Gastronomic Guild judging, Montagna Bresaola della Valtellina IGP was awarded the prestigious Gold Medal for Sensory Purity. Master judges praised the subtle balance of wild mountain juniper, Alpine thyme, and slow cellar drying that yields its velvety, melt-in-the-mouth texture.',
-    image: '/src/assets/images/artisan_curing_cellar_1793429018781.jpg'
+    image: '/images/artisan_curing_cellar_1793429018781.jpg'
   },
   {
     id: 'fsc-certified-paper-milestone',
@@ -923,7 +923,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '4 min read',
     summary: 'Transitioning 40 million pre-sliced charcuterie packs to FSC certified recyclable virgin kraft paper, eliminating 280 tons of plastic annually.',
     content: 'Italia Alimentari announced the successful conversion of its primary retail sliced ranges to FSC certified virgin wood fiber trays. Combined with high-barrier mono-material top films, the initiative marks a critical leap toward our goal of full packaging circularity across the European retail footprint.',
-    image: '/src/assets/images/food_quality_inspection_1793429017795.jpg'
+    image: '/images/food_quality_inspection_1793429017795.jpg'
   },
   {
     id: 'usda-facility-expansion',
@@ -933,7 +933,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '3 min read',
     summary: 'A €15M investment adds four new ISO Class 7 laminar flow slicing suites certified to strict USDA-FSIS export guidelines.',
     content: 'To support rapid growth in the United States, Canada, and Mexico, our flagship Gazoldo degli Ippoliti headquarters completed a state-of-the-art cleanroom expansion. Equipped with automated robotic loading and real-time gas mass spectrometry, the new facility doubles daily throughput of pre-sliced Parma ham and antipasto boards.',
-    image: '/src/assets/images/modern_production_plant_1793428040629.jpg'
+    image: '/images/modern_production_plant_1793428040629.jpg'
   },
   {
     id: 'gastronomy-masterclass-chef',
@@ -943,7 +943,7 @@ export const NEWS_DATA: NewsItem[] = [
     readTime: '3 min read',
     summary: 'Empowering executive chefs and pizzeria maestros with cutting-edge plating techniques, zero-waste portioning, and artisanal pairing protocols.',
     content: 'Italia Alimentari inaugurated a national educational initiative in collaboration with the Federazione Italiana Cuochi. Master Salumiere workshops demonstrate how culinary professionals can maximize profitability and sensory impact through temperature-tempered charcuterie plating and innovative warm Pinsa Romana pairings.',
-    image: '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg'
+    image: '/images/chef_plating_charcuterie_1793429017594.jpg'
   }
 ];
 

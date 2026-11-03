@@ -1,6 +1,6 @@
 import React from 'react';
-import originalLogoWhite from '../assets/images/italia_alimentari_original_white.png';
-import originalLogoDark from '../assets/images/italia_alimentari_original_dark.png';
+const originalLogoWhite = '/images/italia_alimentari_original_white.png';
+const originalLogoDark = '/images/italia_alimentari_original_dark.png';
 
 export interface ItaliaAlimentariLogoProps {
   variant?: 'light' | 'dark' | 'auto';
@@ -22,8 +22,8 @@ export const ItaliaAlimentariLogo: React.FC<ItaliaAlimentariLogoProps> = ({
   const sizeClasses = {
     sm: 'h-7 sm:h-8',
     md: 'h-8 sm:h-9 md:h-10',
-    lg: 'h-10 sm:h-12 md:h-14',
-    xl: 'h-12 sm:h-15 md:h-16'
+    lg: 'h-10 sm:h-11 md:h-12',
+    xl: 'h-11 sm:h-12 md:h-13 xl:h-14'
   }[size];
 
   return (

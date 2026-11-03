@@ -3,10 +3,16 @@ export type Language = 'EN' | 'IT' | 'DE' | 'FR';
 export interface TranslationSchema {
   nav: {
     home: string;
+    company: string;
+    products: string;
+    channels: string;
     quality: string;
     recipes: string;
     contacts: string;
     getInTouch: string;
+    aboutUs: string;
+    facilities: string;
+    brands: string;
   };
   hero: {
     label: string;
@@ -174,10 +180,16 @@ export const translations: Record<Language, TranslationSchema> = {
   IT: {
     nav: {
       home: 'Home',
+      company: 'Azienda',
+      products: 'Prodotti',
+      channels: 'Canali',
       quality: 'Qualità',
       recipes: 'Ricette',
       contacts: 'Contatti',
-      getInTouch: 'Contattaci'
+      getInTouch: 'Contattaci',
+      aboutUs: 'Chi Siamo',
+      facilities: 'Stabilimenti',
+      brands: 'Marchi'
     },
     hero: {
       label: 'Produttore Alimentare Italiano',
@@ -415,10 +427,16 @@ export const translations: Record<Language, TranslationSchema> = {
   EN: {
     nav: {
       home: 'Home',
+      company: 'Company',
+      products: 'Products',
+      channels: 'Channels',
       quality: 'Quality',
       recipes: 'Recipes',
       contacts: 'Contacts',
-      getInTouch: 'Get in Touch'
+      getInTouch: 'Get in Touch',
+      aboutUs: 'About Us',
+      facilities: 'Facilities',
+      brands: 'Brands'
     },
     hero: {
       label: 'Italian Food Manufacturer',
@@ -656,10 +674,16 @@ export const translations: Record<Language, TranslationSchema> = {
   DE: {
     nav: {
       home: 'Startseite',
+      company: 'Unternehmen',
+      products: 'Produkte',
+      channels: 'Kanäle',
       quality: 'Qualität',
       recipes: 'Rezepte',
       contacts: 'Kontakte',
-      getInTouch: 'Kontaktieren'
+      getInTouch: 'Kontaktieren',
+      aboutUs: 'Über Uns',
+      facilities: 'Standorte',
+      brands: 'Marken'
     },
     hero: {
       label: 'Italienischer Lebensmittelhersteller',
@@ -897,10 +921,16 @@ export const translations: Record<Language, TranslationSchema> = {
   FR: {
     nav: {
       home: 'Accueil',
+      company: 'Entreprise',
+      products: 'Produits',
+      channels: 'Canaux',
       quality: 'Qualité',
       recipes: 'Recettes',
       contacts: 'Contacts',
-      getInTouch: 'Contactez-nous'
+      getInTouch: 'Contactez-nous',
+      aboutUs: 'À Propos',
+      facilities: 'Établissements',
+      brands: 'Marques'
     },
     hero: {
       label: 'Fabricant de Charcuterie Italienne',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Clock, ChefHat, Check, Wine, Thermometer, Award, Sparkles, Send } from 'lucide-react';
 import { RecipeItem } from '../data/companyData';
+import { handleImageError } from '../utils/imageUtils';
 
 interface RecipeModalProps {
   recipe: RecipeItem | null;
@@ -29,7 +30,7 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({
             src={recipe.image}
             alt={recipe.title}
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/90 via-[#151515]/40 to-transparent" />
 

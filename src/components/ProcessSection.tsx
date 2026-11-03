@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PROCESS_STEPS, ProcessStep } from '../data/companyData';
 import { ArrowRight, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface ProcessSectionProps {
   onStepClick?: (step: ProcessStep) => void;
@@ -68,7 +69,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onStepClick }) =
                       src={step.image}
                       alt={step.title}
                       className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
+                      onError={handleImageError}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/80 via-transparent to-transparent" />
                     

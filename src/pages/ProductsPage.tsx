@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PRODUCTS_DATA, ProductItem } from '../data/companyData';
 import { ArrowUpRight, Package, Check, Filter } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface ProductsPageProps {
   onSelectProduct: (p: ProductItem) => void;
@@ -88,7 +89,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
               </div>
 

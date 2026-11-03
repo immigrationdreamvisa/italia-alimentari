@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Play, Pause, RotateCcw, Volume2, VolumeX, Sparkles, CheckCircle2 } from 'lucide-react';
 import { ItaliaAlimentariLogo } from './ItaliaAlimentariLogo';
+import { handleImageError } from '../utils/imageUtils';
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -19,25 +20,25 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
       title: 'Chapter 01: The Italian Food Valley',
       location: 'Busseto & Parma, Emilia-Romagna',
       description: 'The journey begins in the historic curing lofts of Busseto, where regional microclimates allow Prosciutto di Parma and Culatello di Zibello to cure naturally.',
-      image: '/src/assets/images/artisan_curing_cellar_1793429018781.jpg'
+      image: '/images/artisan_curing_cellar_1793429018781.jpg'
     },
     {
       title: 'Chapter 02: 60 Years of Artisan Curing',
       location: 'Busseto Heritage Cellars (Est. 1962)',
       description: 'Master curers inspect whole hams using antique horse-bone needles. Mortadella Gran Ibis is slow-baked in traditional dry air stoves following the protected Bologna IGP canon.',
-      image: '/src/assets/images/traditional_deli_meats_1793428037900.jpg'
+      image: '/images/traditional_deli_meats_1793428037900.jpg'
     },
     {
       title: 'Chapter 03: Cleanroom Slicing Science',
       location: 'Gazoldo degli Ippoliti (Mantova)',
       description: 'Within ISO-certified cleanrooms, ultra-high-speed stainless lines slice cured hams at near-zero temperatures, locking in aromas and creating airy folded slices.',
-      image: '/src/assets/images/modern_production_plant_1793428040629.jpg'
+      image: '/images/modern_production_plant_1793428040629.jpg'
     },
     {
       title: 'Chapter 04: Reaching 50+ Nations',
       location: 'Global Cold Chain Logistics',
       description: 'From Milan and Paris to Tokyo and New York, authentic Italian taste is delivered with absolute freshness, verified traceability, and eco-friendly recyclable trays.',
-      image: '/src/assets/images/hero_charcuterie_1793428038233.jpg'
+      image: '/images/hero_charcuterie_1793428038233.jpg'
     }
   ];
 
@@ -57,7 +58,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             className={`w-full h-full object-cover transition-all duration-1000 ${
               isPlaying ? 'scale-105 opacity-90' : 'scale-100 opacity-60'
             }`}
-            referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-black/60" />

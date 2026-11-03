@@ -1,5 +1,5 @@
 import React from 'react';
-import stabilimentiMondoImg from '../assets/images/italia_alimentari_stabilimenti_mondo.png';
+const stabilimentiMondoImg = '/images/italia_alimentari_stabilimenti_mondo.png';
 
 export const IndustrialStructure: React.FC = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { STATS_DATA, StatItem } from '../data/companyData';
 import { Globe, Award, Factory, CheckCircle2 } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 export const GlobalImpact: React.FC = () => {
   const iconList = [Globe, Factory, Award, CheckCircle2];
@@ -10,10 +11,10 @@ export const GlobalImpact: React.FC = () => {
       {/* Background Image: Master Italian Ham Aging Cellar with Dramatic Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/artisan_curing_cellar_1793429018781.jpg"
+          src="/images/artisan_curing_cellar_1793429018781.jpg"
           alt="Artisan cured prosciutto cellar"
           className="w-full h-full object-cover object-center opacity-30 transform scale-105 transition-transform duration-1000"
-          referrerPolicy="no-referrer"
+          onError={handleImageError}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#151515]/90 via-[#151515]/80 to-[#151515]" />
       </div>

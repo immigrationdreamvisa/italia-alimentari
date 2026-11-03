@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Award, ShieldCheck, Factory, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface CompanyPageProps {
   onOpenStoryModal: () => void;
@@ -93,10 +94,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenStoryModal, onCo
             <div className="lg:col-span-5 relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-[#FAF4E7]">
                 <img
-                  src="/src/assets/images/busseto_heritage_estate.jpg"
+                  src="/images/busseto_heritage_estate.jpg"
                   alt="Historic Busseto Parma founding estate and salumi curing cellars"
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
               </div>
             </div>
@@ -177,10 +178,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onOpenStoryModal, onCo
 
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#151515]/10">
               <img
-                src="/src/assets/images/alpine_valtellina_facility.jpg"
+                src="/images/alpine_valtellina_facility.jpg"
                 alt="Valtellina Alpine curing facility in Postalesio"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
             </div>
           </div>

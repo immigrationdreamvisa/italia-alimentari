@@ -2,6 +2,7 @@ import React from 'react';
 import { RECIPES_DATA, RecipeItem } from '../data/companyData';
 import { ArrowUpRight, Clock, ChefHat, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageUtils';
 
 interface RecipesSectionProps {
   onSelectRecipe: (recipe: RecipeItem) => void;
@@ -62,7 +63,7 @@ export const RecipesSection: React.FC<RecipesSectionProps> = ({
                   src={recipe.image}
                   alt={recipe.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/75 via-transparent to-black/25 pointer-events-none" />
 
@@ -116,10 +117,10 @@ export const RecipesSection: React.FC<RecipesSectionProps> = ({
         <div className="mt-12 bg-[#151515] text-white rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center gap-8 text-left shadow-xl relative overflow-hidden">
           <div className="relative w-full lg:w-48 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#FFC900] shadow-lg bg-black">
             <img
-              src="/src/assets/images/executive_chef_culinary_art.jpg"
+              src="/images/executive_chef_culinary_art.jpg"
               alt="Executive Chef Plating Italian Charcuterie with Precision"
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
+              onError={handleImageError}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
             <span className="absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#FFC900] text-[#151515]">

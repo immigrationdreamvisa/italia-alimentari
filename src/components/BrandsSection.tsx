@@ -1,6 +1,7 @@
 import React from 'react';
 import { BRANDS_DATA, BrandItem } from '../data/companyData';
 import { ArrowUpRight, Crown, Award, ShieldCheck, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface BrandsSectionProps {
   onSelectBrand: (brand: BrandItem) => void;
@@ -15,14 +16,14 @@ export const BrandsSection: React.FC<BrandsSectionProps> = ({ onSelectBrand }) =
   };
 
   const brandVisuals: Record<string, string> = {
-    'ibis-1962': '/src/assets/images/hero_charcuterie_1793428038233.jpg',
-    'corte-buona': '/src/assets/images/sliced_deli_meats_1793428038740.jpg',
-    'montagna': '/src/assets/images/artisan_curing_cellar_1793429018781.jpg',
-    'spanino': '/src/assets/images/italian_snacks_panini_1793428039900.jpg',
-    'vitale-deli': '/src/assets/images/chef_plating_charcuterie_1793429017594.jpg',
-    'corte-buona-usa': '/src/assets/images/traditional_deli_meats_1793428037900.jpg',
-    'cuor-di-terra': '/src/assets/images/gourmet_recipe_spread_1793429018072.jpg',
-    'shop-ibis': '/src/assets/images/glazed_crisp_bacon_1793428040147.jpg'
+    'ibis-1962': '/images/hero_charcuterie_1793428038233.jpg',
+    'corte-buona': '/images/sliced_deli_meats_1793428038740.jpg',
+    'montagna': '/images/artisan_curing_cellar_1793429018781.jpg',
+    'spanino': '/images/italian_snacks_panini_1793428039900.jpg',
+    'vitale-deli': '/images/chef_plating_charcuterie_1793429017594.jpg',
+    'corte-buona-usa': '/images/traditional_deli_meats_1793428037900.jpg',
+    'cuor-di-terra': '/images/gourmet_recipe_spread_1793429018072.jpg',
+    'shop-ibis': '/images/glazed_crisp_bacon_1793428040147.jpg'
   };
 
   // Feature top 4 flagship brands on home page
@@ -64,7 +65,7 @@ export const BrandsSection: React.FC<BrandsSectionProps> = ({ onSelectBrand }) =
         {/* 4 Upgraded Brand Image Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {featuredBrands.map((brand) => {
-            const visual = brandVisuals[brand.id] || '/src/assets/images/hero_charcuterie_1793428038233.jpg';
+            const visual = brandVisuals[brand.id] || '/images/hero_charcuterie_1793428038233.jpg';
             return (
               <div
                 key={brand.id}
@@ -77,7 +78,7 @@ export const BrandsSection: React.FC<BrandsSectionProps> = ({ onSelectBrand }) =
                     src={visual}
                     alt={brand.name}
                     className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700 ease-out"
-                    referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30 pointer-events-none" />
                   

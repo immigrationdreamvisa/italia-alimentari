@@ -1,6 +1,7 @@
 import React from 'react';
 import { SUSTAINABILITY_PILLARS } from '../data/companyData';
 import { Package, Zap, ShieldCheck, Recycle, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface SustainabilityPageProps {
   onOpenCharter?: () => void;
@@ -84,10 +85,10 @@ export const SustainabilityPage: React.FC<SustainabilityPageProps> = ({
 
             <div className="lg:col-span-5 aspect-[4/3] rounded-2xl overflow-hidden shadow-md border-2 border-[#FAF4E7] bg-[#FAF4E7]">
               <img
-                src="/src/assets/images/sustainable_fsc_paper_packaging.jpg"
+                src="/images/sustainable_fsc_paper_packaging.jpg"
                 alt="Recyclable FSC-certified paper-bottom charcuterie tray"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+                onError={handleImageError}
               />
             </div>
           </div>

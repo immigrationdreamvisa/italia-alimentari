@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NEWS_DATA, NewsItem } from '../data/companyData';
 import { ChevronRight, Calendar, Clock } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface NewsPageProps {
   onSelectNews: (item: NewsItem) => void;
@@ -77,7 +78,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onSelectNews, onContactPress
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover transform group-hover:scale-106 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
               </div>
 

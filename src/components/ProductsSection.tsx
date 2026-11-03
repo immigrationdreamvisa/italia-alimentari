@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PRODUCTS_DATA, ProductItem } from '../data/companyData';
 import { ArrowUpRight, Package, ArrowRight, Check, Sparkles } from 'lucide-react';
+import { handleImageError } from '../utils/imageUtils';
 
 interface ProductsSectionProps {
   onSelectProduct: (product: ProductItem) => void;
@@ -89,7 +90,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                  referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 
                 {/* Visual Scrim Gradient */}
